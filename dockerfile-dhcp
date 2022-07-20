@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 LABEL maintainer "Michal Kosik"
 
 
-RUN apt-get update && apt-get install net-tools isc-dhcp-server 
+RUN apt-get update && apt-get install net-tools isc-dhcp-server -y
 
 WORKDIR /etc/dhcp/
 COPY dhcp/dhcp.conf /etc/dhcp/
