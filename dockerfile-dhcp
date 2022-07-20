@@ -1,11 +1,11 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 LABEL maintainer "Michal Kosik"
 
 
 RUN apt-get update -y && apt-get install net-tools isc-dhcp-server -y
 
 WORKDIR /etc/dhcp/
-COPY dhcp.conf /etc/dhcp/
+COPY dhcpd.conf /etc/dhcp/
 
 
 ENTRYPOINT ["service", "dhcpd", "start"]
