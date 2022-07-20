@@ -9,3 +9,4 @@ COPY dhcpd.conf /etc/dhcp/
 
 
 ENTRYPOINT ["service", "isc-dhcpd-server", "start"]
+ENTRYPINT ["/bin/bash"]
