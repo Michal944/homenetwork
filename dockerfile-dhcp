@@ -7,6 +7,5 @@ RUN apt-get update -y && apt-get install apt-utils net-tools isc-dhcp-server -y
 WORKDIR /etc/dhcp/
 COPY dhcpd.conf /etc/dhcp/
 
-
 ENTRYPOINT ["service", "isc-dhcp-server", "start"]
-ENTRYPINT ["/bin/bash"]
+CMD ["/bin/bash"]
